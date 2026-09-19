@@ -36,16 +36,22 @@ def quantize_for_qnn(input_path: str, output_path: str):
     model_to_quantize = preproc_path if changed else input_path
 
     qnn_config = get_qnn_qdq_config(
-        model_to_quantize, reader,
-        activation_type=QuantType.QUInt16,
-        weight_type=QuantType.QUInt8,
-    )
+    model_to_quantize, reader,
+    activation_type=QuantType.QUInt8,   # changed from QUInt16
+    weight_type=QuantType.QUInt8,
+)
     quantize(model_to_quantize, output_path, qnn_config)
-    print(f"Saved quantized model: {output_path}")
+
+    # Force single-file save (embed all weight data, no external .data file)
+    import onnx
+    model = onnx.load(output_path, load_external_data=True)
+    onnx.save(model, output_path, save_as_external_data=False)
+
+    print(f"Saved quantized model (single-file): {output_path}")
 
 
 if __name__ == "__main__":
     import sys
-    inp = sys.argv[1] if len(sys.argv) > 1 else "data/models/resnet18.onnx"
-    out = sys.argv[2] if len(sys.argv) > 2 else "data/models/resnet18_qdq.onnx"
+    inp = sys.argv[1] if len(sys.argv) > 1 else "data/models/resnet18_fresh.onnx"
+    out = sys.argv[2] if len(sys.argv) > 2 else "data/models/resnet18_fresh_qdq.onnx"
     quantize_for_qnn(inp, out)
