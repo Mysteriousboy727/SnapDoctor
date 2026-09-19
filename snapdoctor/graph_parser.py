@@ -13,9 +13,15 @@ class OpNode:
     attrs: Dict[str, Any] = field(default_factory=dict)
 
 
-def load_graph(model_path: str) -> onnx.ModelProto:
+def load_graph(model_path: str, strict_check: bool = False) -> onnx.ModelProto:
     model = onnx.load(model_path)
-    onnx.checker.check_model(model)
+    if strict_check:
+        onnx.checker.check_model(model)
+    else:
+        try:
+            onnx.checker.check_model(model)
+        except Exception as e:
+            print(f"[warning] onnx checker validation issue (non-fatal, continuing): {e}")
     return model
 
 
