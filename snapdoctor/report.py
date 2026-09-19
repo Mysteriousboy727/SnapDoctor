@@ -1,20 +1,26 @@
 
-from .fallback_detector import Diagnosis, residency_summary
+from .fallback_detector import Diagnosis, residency_summary, check_quantization_requirement
 from typing import List
 
 
-def print_report(diagnoses: List[Diagnosis]):
+def print_report(diagnoses: List[Diagnosis], model_path: str = None):
     summary = residency_summary(diagnoses)
     print("=" * 50)
-    print(f"NPU Residency: {summary['residency_pct']}% "
+    print(f"Op-level NPU compatibility: {summary['residency_pct']}% "
           f"({summary['resident_ops']}/{summary['total_ops']} ops)")
     print("=" * 50)
     if summary["fallback_ops"]:
-        print("\nFallback ops (blocking full NPU residency):")
+        print("\nUnsupported ops (blocking full NPU residency):")
         for d in summary["fallback_ops"]:
             print(f"  - {d.op_name} [{d.op_type}]: {d.reason}")
     else:
-        print("\nAll ops NPU-resident.")
+        print("\nAll ops are QNN-supported types.")
+
+    if model_path:
+        q = check_quantization_requirement(model_path)
+        print("\n" + "-" * 50)
+        print(f"HTP (NPU) runnable: {q['htp_runnable']}")
+        print(f"  {q['note']}")
 
 
 if __name__ == "__main__":
@@ -29,4 +35,4 @@ if __name__ == "__main__":
     ops = extract_ops(load_graph(model_path))
     events = parse_log(log_path)
     diagnoses = diagnose(ops, events)
-    print_report(diagnoses)
+    print_report(diagnoses, model_path=model_path)
