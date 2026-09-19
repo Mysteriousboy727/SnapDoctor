@@ -1,0 +1,7 @@
+model_path: "data/models/unet.onnx"
+controlnet_path: "data/models/controlnet.onnx"
+
+backend: "qnn"          # qnn | cpu | directml
+precision: "fp16"       # fp32 | fp16 | int8
+
+# Qualcomm AI Hub token goes in .env, NOT here — see .env.example
