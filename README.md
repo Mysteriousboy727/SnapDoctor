@@ -14,32 +14,11 @@
 
 ---
 
-## 🎯 The Problem
+## 🚨 The Problem
 
-Deploying AI models to Snapdragon devices can involve failures that are difficult to diagnose from a single compile or runtime result.
-
-```mermaid
-flowchart LR
-
-    A[👨‍💻 Developer] --> B[📦 model.onnx]
-
-    B --> C{Configure QNN}
-
-    C --> D[🤔 What happened?]
-
-    D --> E["❓ Unsupported op?"]
-    D --> F["❓ Quantization / precision issue?"]
-    D --> G["❓ CPU fallback?"]
-    D --> H["❓ Cryptic compiler/runtime error?"]
-    D --> I["❓ Performance bottleneck?"]
-
-    style D fill:#ffcc00,stroke:#333
-    style E fill:#ff6b6b,color:#fff
-    style F fill:#ff6b6b,color:#fff
-    style G fill:#ff6b6b,color:#fff
-    style H fill:#ff6b6b,color:#fff
-    style I fill:#ff6b6b,color:#fff
-```
+<p align="center">
+  <img src="assets/The_problem.png" alt="The Problem SnapDoctor Solves" width="100%">
+</p>
 
 Developers may see situations such as:
 
@@ -53,113 +32,25 @@ Developers may see situations such as:
 
 ---
 
-## 🚀 What SnapDoctor Does
+## 🔬 What SnapDoctor Does
 
-SnapDoctor closes the loop:
+<p align="center">
+  <img src="assets/what_snapdoctor_does.png" alt="What SnapDoctor Does" width="100%">
+</p>
 
-**diagnose → fix → verify → analyze**
+<p align="center">
+  <b>Diagnose → Fix → Verify → Analyze</b>
+</p>
 
-```mermaid
-flowchart TD
+## 🏗️ SnapDoctor Architecture
 
-    A[📥 Input: model.onnx] --> B[🔍 Graph Parser]
+<p align="center">
+  <img src="assets/Architecture.png" alt="SnapDoctor Architecture" width="100%">
+</p>
 
-    B --> C[📊 Op-level Analysis]
-
-    C --> D{Backend / Op Analysis}
-
-    D -->|Supported| E[Precision & Quantization Check]
-    D -->|Potentially unsupported| F[🚩 Flag candidate operation]
-
-    E --> G[🛠️ Apply compatible transformation]
-
-    G --> H[☁️ Submit to Qualcomm AI Hub]
-
-    F --> L[📄 Diagnostic Report]
-
-    H --> M[💻 Snapdragon X Elite CRD]
-
-    M --> N[📈 Hardware Profile]
-
-    N --> O[🔬 NPU Residency + Cycle Analysis]
-
-    O --> L
-
-    style A fill:#4dabf7,color:#fff
-    style L fill:#51cf66,color:#fff
-    style M fill:#e64980,color:#fff
-    style N fill:#51cf66,color:#fff
-    style O fill:#9775fa,color:#fff
-```
-
-The important distinction is that SnapDoctor does not stop at:
-
-> **"The model compiled."**
-
-It attempts to determine:
-
-> **"What happened when the model actually ran on the target Snapdragon device?"**
-
----
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart TB
-
-    subgraph core["🩺 snapdoctor/ — Diagnostic Engine"]
-
-        GP[graph_parser.py<br/>📖 Reads ONNX graph]
-
-        QLP[qnn_log_parser.py<br/>📜 Parses QNN runtime logs]
-
-        FD[fallback_detector.py<br/>🚦 Op-support + precision checks]
-
-        AHP[aihub_parser.py<br/>☁️ Parses AI Hub profile results]
-
-        RPT[report.py<br/>📋 Human-readable diagnosis]
-
-        GP --> FD
-        QLP --> FD
-        AHP --> RPT
-        FD --> RPT
-
-    end
-
-    subgraph fixes["🛠️ snapdoctor/fixes/ — Remediation & Verification"]
-
-        QM[quantize_model.py<br/>⚙️ QDQ quantization]
-
-        EXP[export_vit.py / export_vit_tanhgelu.py<br/>📤 ONNX model transformations]
-
-        AIH[aihub_profile.py<br/>☁️ Hardware verification]
-
-        ANL[analyze_erf_fallback.py<br/>🔬 Per-op cycle analysis]
-
-    end
-
-    subgraph hw["💻 Qualcomm AI Hub"]
-
-        DEV[Snapdragon X Elite CRD<br/>Hosted Qualcomm hardware]
-
-    end
-
-    core -.diagnoses.-> fixes
-
-    fixes --> AIH
-
-    AIH --> DEV
-
-    DEV --> AIH
-
-    AIH --> ANL
-
-    ANL --> RPT
-
-    style core fill:#1971c2,color:#fff
-    style fixes fill:#e8590c,color:#fff
-    style hw fill:#2f9e44,color:#fff
-```
+<p align="center">
+  <b>Diagnose → Fix → Verify → Analyze</b>
+</p>
 
 ---
 
