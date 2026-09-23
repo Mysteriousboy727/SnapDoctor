@@ -1,0 +1,2283 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 117732,
+    "estimated_inference_peak_memory": 21352448,
+    "first_load_time": 33781020,
+    "first_load_peak_memory": 2004328448,
+    "warm_load_time": 560513,
+    "warm_load_peak_memory": 19222528,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      1443643392,
+      1443643392
+    ],
+    "first_load_memory_peak_range": [
+      1999392768,
+      1999392768
+    ],
+    "warm_load_memory_increase_range": [
+      14319616,
+      14319616
+    ],
+    "warm_load_memory_peak_range": [
+      14319616,
+      14319616
+    ],
+    "inference_memory_increase_range": [
+      0,
+      0
+    ],
+    "inference_memory_peak_range": [
+      983040,
+      983040
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      33781020
+    ],
+    "all_warm_load_times": [
+      560513
+    ],
+    "all_inference_times": [
+      119842,
+      118632,
+      119927,
+      119259,
+      120297,
+      118857,
+      120427,
+      118680,
+      121362,
+      120857,
+      119181,
+      118991,
+      120154,
+      119256,
+      118902,
+      118771,
+      119391,
+      119554,
+      119769,
+      119936,
+      119390,
+      121926,
+      119391,
+      118706,
+      120023,
+      118888,
+      121424,
+      121911,
+      119801,
+      120271,
+      119405,
+      119070,
+      120057,
+      118570,
+      118939,
+      118834,
+      118486,
+      120651,
+      119093,
+      119128,
+      119349,
+      122963,
+      120017,
+      119205,
+      119224,
+      121076,
+      120171,
+      119066,
+      117732,
+      119839,
+      118716,
+      118791,
+      120494,
+      120053,
+      120673,
+      119585,
+      118984,
+      119742,
+      120017,
+      118252,
+      119236,
+      119724,
+      120346,
+      118953,
+      119586,
+      119619,
+      119540,
+      118822,
+      119128,
+      119270,
+      119502,
+      121729,
+      120457,
+      120183,
+      125403,
+      118591,
+      119534,
+      119500,
+      119087,
+      120604,
+      118470,
+      119535,
+      118928,
+      118962,
+      119555,
+      119707,
+      118855,
+      120292,
+      119187,
+      118724,
+      119842,
+      119569,
+      120842,
+      120431,
+      118978,
+      120740,
+      119791,
+      119845,
+      118845,
+      119092
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "Input",
+      "type": "Input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "QNN_DATATYPE_FLOAT_32_converted_input_features_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "QNN",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 207538
+    },
+    {
+      "name": "/conv1/Conv_reshape_to_2d",
+      "type": "/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/conv1/Conv_reshape_to_2d_0231",
+      "type": "/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 192921
+    },
+    {
+      "name": "/conv1/Conv_2d",
+      "type": "/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 740868
+    },
+    {
+      "name": "/conv1/Conv_intermediate",
+      "type": "/conv1/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "_elementwiseneuron_0",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 827686
+    },
+    {
+      "name": "/conv2/Conv_reshape_to_2d",
+      "type": "/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/conv2/Conv_2d",
+      "type": "/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2042172
+    },
+    {
+      "name": "/conv2/Conv_intermediate",
+      "type": "/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/conv2/Conv_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/conv2/Conv",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1008881
+    },
+    {
+      "name": "_elementwiseneuron_1",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2026559
+    },
+    {
+      "name": "/Add_4",
+      "type": "/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 221210
+    },
+    {
+      "name": "/layers.0/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1250175
+    },
+    {
+      "name": "/layers.0/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3039852
+    },
+    {
+      "name": "/layers.0/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/q_proj/MatMul",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 231497
+    },
+    {
+      "name": "/layers.0/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1093785
+    },
+    {
+      "name": "/layers.0/self_attn/k_proj/MatMul",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 284135
+    },
+    {
+      "name": "/layers.0/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 71990
+    },
+    {
+      "name": "/layers.0/self_attn/v_proj/MatMul",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 176856
+    },
+    {
+      "name": "/layers.0/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6671127
+    },
+    {
+      "name": "/layers.0/self_attn/v_proj/Add",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 825746
+    },
+    {
+      "name": "node_Mul_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1205247
+    },
+    {
+      "name": "node_Add_14",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2627182
+    },
+    {
+      "name": "/layers.0/self_attn/Transpose_2",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 90731
+    },
+    {
+      "name": "/layers.0/self_attn/Reshape_2",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/Reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/Transpose_1",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 534139
+    },
+    {
+      "name": "/layers.0/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 686291
+    },
+    {
+      "name": "/layers.0/self_attn/Transpose",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 543175
+    },
+    {
+      "name": "/layers.0/self_attn/MatMul",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1819943
+    },
+    {
+      "name": "/layers.0/self_attn/Softmax",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/MatMul_1",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5387666
+    },
+    {
+      "name": "/layers.0/self_attn/Transpose_3",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/Reshape_3",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/out_proj/MatMul",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 175251
+    },
+    {
+      "name": "/layers.0/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6423446
+    },
+    {
+      "name": "/layers.0/self_attn/out_proj/Add",
+      "type": "/layers.0/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1028669
+    },
+    {
+      "name": "/layers.0/Add",
+      "type": "/layers.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 597684
+    },
+    {
+      "name": "/layers.0/final_layer_norm/LayerNormalization",
+      "type": "/layers.0/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1271824
+    },
+    {
+      "name": "/layers.0/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.0/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3049868
+    },
+    {
+      "name": "/layers.0/fc1/MatMul_pre_reshape",
+      "type": "/layers.0/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/fc1/MatMul",
+      "type": "/layers.0/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 780118
+    },
+    {
+      "name": "/layers.0/fc1/MatMul_post_reshape",
+      "type": "/layers.0/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.0/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24188206
+    },
+    {
+      "name": "/layers.0/fc1/Add",
+      "type": "/layers.0/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3682874
+    },
+    {
+      "name": "/layers.0/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.0/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12021338
+    },
+    {
+      "name": "_elementwiseneuron_2",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 922592
+    },
+    {
+      "name": "/layers.0/fc2/MatMul_pre_reshape",
+      "type": "/layers.0/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/fc2/MatMul",
+      "type": "/layers.0/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 751496
+    },
+    {
+      "name": "/layers.0/fc2/MatMul_post_reshape",
+      "type": "/layers.0/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.0/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.0/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5459818
+    },
+    {
+      "name": "/layers.0/fc2/Add",
+      "type": "/layers.0/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 928410
+    },
+    {
+      "name": "/layers.0/Add_1",
+      "type": "/layers.0/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 529957
+    },
+    {
+      "name": "/layers.1/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1236381
+    },
+    {
+      "name": "/layers.1/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3041621
+    },
+    {
+      "name": "/layers.1/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/q_proj/MatMul",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 225322
+    },
+    {
+      "name": "/layers.1/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1102917
+    },
+    {
+      "name": "/layers.1/self_attn/k_proj/MatMul",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 292817
+    },
+    {
+      "name": "/layers.1/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72390
+    },
+    {
+      "name": "/layers.1/self_attn/v_proj/MatMul",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 160579
+    },
+    {
+      "name": "/layers.1/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6461606
+    },
+    {
+      "name": "/layers.1/self_attn/v_proj/Add",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 806988
+    },
+    {
+      "name": "node_Mul_15",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1194317
+    },
+    {
+      "name": "node_Add_17",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2616951
+    },
+    {
+      "name": "/layers.1/self_attn/Transpose_2",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 93425
+    },
+    {
+      "name": "/layers.1/self_attn/Reshape_2",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/Reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/Transpose_1",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 563028
+    },
+    {
+      "name": "/layers.1/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 705185
+    },
+    {
+      "name": "/layers.1/self_attn/Transpose",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 544672
+    },
+    {
+      "name": "/layers.1/self_attn/MatMul",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1821562
+    },
+    {
+      "name": "/layers.1/self_attn/Softmax",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/MatMul_1",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5416802
+    },
+    {
+      "name": "/layers.1/self_attn/Transpose_3",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/Reshape_3",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/out_proj/MatMul",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 166282
+    },
+    {
+      "name": "/layers.1/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6279342
+    },
+    {
+      "name": "/layers.1/self_attn/out_proj/Add",
+      "type": "/layers.1/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1028525
+    },
+    {
+      "name": "/layers.1/Add",
+      "type": "/layers.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 614534
+    },
+    {
+      "name": "/layers.1/final_layer_norm/LayerNormalization",
+      "type": "/layers.1/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1244984
+    },
+    {
+      "name": "/layers.1/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.1/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3053873
+    },
+    {
+      "name": "/layers.1/fc1/MatMul_pre_reshape",
+      "type": "/layers.1/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/fc1/MatMul",
+      "type": "/layers.1/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 794282
+    },
+    {
+      "name": "/layers.1/fc1/MatMul_post_reshape",
+      "type": "/layers.1/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.1/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24825118
+    },
+    {
+      "name": "/layers.1/fc1/Add",
+      "type": "/layers.1/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3800276
+    },
+    {
+      "name": "/layers.1/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.1/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11930110
+    },
+    {
+      "name": "_elementwiseneuron_3",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 901075
+    },
+    {
+      "name": "/layers.1/fc2/MatMul_pre_reshape",
+      "type": "/layers.1/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/fc2/MatMul",
+      "type": "/layers.1/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 803157
+    },
+    {
+      "name": "/layers.1/fc2/MatMul_post_reshape",
+      "type": "/layers.1/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.1/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.1/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5553253
+    },
+    {
+      "name": "/layers.1/fc2/Add",
+      "type": "/layers.1/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 953792
+    },
+    {
+      "name": "/layers.1/Add_1",
+      "type": "/layers.1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 499329
+    },
+    {
+      "name": "/layers.2/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1233118
+    },
+    {
+      "name": "/layers.2/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3053012
+    },
+    {
+      "name": "/layers.2/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/q_proj/MatMul",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 242526
+    },
+    {
+      "name": "/layers.2/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1100343
+    },
+    {
+      "name": "/layers.2/self_attn/k_proj/MatMul",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 287899
+    },
+    {
+      "name": "/layers.2/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72956
+    },
+    {
+      "name": "/layers.2/self_attn/v_proj/MatMul",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 168590
+    },
+    {
+      "name": "/layers.2/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6681250
+    },
+    {
+      "name": "/layers.2/self_attn/v_proj/Add",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 829241
+    },
+    {
+      "name": "node_Mul_18",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1192039
+    },
+    {
+      "name": "node_Add_20",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2602273
+    },
+    {
+      "name": "/layers.2/self_attn/Transpose_2",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 91516
+    },
+    {
+      "name": "/layers.2/self_attn/Reshape_2",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/Reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/Transpose_1",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 523582
+    },
+    {
+      "name": "/layers.2/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 710280
+    },
+    {
+      "name": "/layers.2/self_attn/Transpose",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 543928
+    },
+    {
+      "name": "/layers.2/self_attn/MatMul",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1487628
+    },
+    {
+      "name": "/layers.2/self_attn/Softmax",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/MatMul_1",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5411088
+    },
+    {
+      "name": "/layers.2/self_attn/Transpose_3",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/Reshape_3",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/out_proj/MatMul",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 171413
+    },
+    {
+      "name": "/layers.2/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6164686
+    },
+    {
+      "name": "/layers.2/self_attn/out_proj/Add",
+      "type": "/layers.2/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1018668
+    },
+    {
+      "name": "/layers.2/Add",
+      "type": "/layers.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 631595
+    },
+    {
+      "name": "/layers.2/final_layer_norm/LayerNormalization",
+      "type": "/layers.2/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1247852
+    },
+    {
+      "name": "/layers.2/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.2/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3058056
+    },
+    {
+      "name": "/layers.2/fc1/MatMul_pre_reshape",
+      "type": "/layers.2/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/fc1/MatMul",
+      "type": "/layers.2/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 775717
+    },
+    {
+      "name": "/layers.2/fc1/MatMul_post_reshape",
+      "type": "/layers.2/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.2/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 25614922
+    },
+    {
+      "name": "/layers.2/fc1/Add",
+      "type": "/layers.2/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3894878
+    },
+    {
+      "name": "/layers.2/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.2/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11989846
+    },
+    {
+      "name": "_elementwiseneuron_4",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 930501
+    },
+    {
+      "name": "/layers.2/fc2/MatMul_pre_reshape",
+      "type": "/layers.2/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/fc2/MatMul",
+      "type": "/layers.2/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 826257
+    },
+    {
+      "name": "/layers.2/fc2/MatMul_post_reshape",
+      "type": "/layers.2/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.2/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.2/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5851118
+    },
+    {
+      "name": "/layers.2/fc2/Add",
+      "type": "/layers.2/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 973848
+    },
+    {
+      "name": "/layers.2/Add_1",
+      "type": "/layers.2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 513273
+    },
+    {
+      "name": "/layers.3/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1190355
+    },
+    {
+      "name": "/layers.3/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3046982
+    },
+    {
+      "name": "/layers.3/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/q_proj/MatMul",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 233381
+    },
+    {
+      "name": "/layers.3/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1103583
+    },
+    {
+      "name": "/layers.3/self_attn/k_proj/MatMul",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 290921
+    },
+    {
+      "name": "/layers.3/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72916
+    },
+    {
+      "name": "/layers.3/self_attn/v_proj/MatMul",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 165419
+    },
+    {
+      "name": "/layers.3/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6758277
+    },
+    {
+      "name": "/layers.3/self_attn/v_proj/Add",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 867912
+    },
+    {
+      "name": "node_Mul_21",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1203469
+    },
+    {
+      "name": "node_Add_23",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2641262
+    },
+    {
+      "name": "/layers.3/self_attn/Transpose_2",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 95570
+    },
+    {
+      "name": "/layers.3/self_attn/Reshape_2",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/Reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/Transpose_1",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 514851
+    },
+    {
+      "name": "/layers.3/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 700370
+    },
+    {
+      "name": "/layers.3/self_attn/Transpose",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 539008
+    },
+    {
+      "name": "/layers.3/self_attn/MatMul",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1829862
+    },
+    {
+      "name": "/layers.3/self_attn/Softmax",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/MatMul_1",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5405463
+    },
+    {
+      "name": "/layers.3/self_attn/Transpose_3",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/Reshape_3",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/out_proj/MatMul",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 164107
+    },
+    {
+      "name": "/layers.3/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6253429
+    },
+    {
+      "name": "/layers.3/self_attn/out_proj/Add",
+      "type": "/layers.3/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1061756
+    },
+    {
+      "name": "/layers.3/Add",
+      "type": "/layers.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 572300
+    },
+    {
+      "name": "/layers.3/final_layer_norm/LayerNormalization",
+      "type": "/layers.3/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1267542
+    },
+    {
+      "name": "/layers.3/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.3/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3034719
+    },
+    {
+      "name": "/layers.3/fc1/MatMul_pre_reshape",
+      "type": "/layers.3/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/fc1/MatMul",
+      "type": "/layers.3/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 820179
+    },
+    {
+      "name": "/layers.3/fc1/MatMul_post_reshape",
+      "type": "/layers.3/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.3/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 25215511
+    },
+    {
+      "name": "/layers.3/fc1/Add",
+      "type": "/layers.3/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3759175
+    },
+    {
+      "name": "/layers.3/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.3/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11962627
+    },
+    {
+      "name": "_elementwiseneuron_5",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 896896
+    },
+    {
+      "name": "/layers.3/fc2/MatMul_pre_reshape",
+      "type": "/layers.3/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/fc2/MatMul",
+      "type": "/layers.3/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 771282
+    },
+    {
+      "name": "/layers.3/fc2/MatMul_post_reshape",
+      "type": "/layers.3/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.3/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.3/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5460464
+    },
+    {
+      "name": "/layers.3/fc2/Add",
+      "type": "/layers.3/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 909091
+    },
+    {
+      "name": "/layers.3/Add_1",
+      "type": "/layers.3/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 494631
+    },
+    {
+      "name": "/layers.4/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1220715
+    },
+    {
+      "name": "/layers.4/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3064192
+    },
+    {
+      "name": "/layers.4/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/q_proj/MatMul",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 237204
+    },
+    {
+      "name": "/layers.4/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1109348
+    },
+    {
+      "name": "/layers.4/self_attn/k_proj/MatMul",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 336212
+    },
+    {
+      "name": "/layers.4/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72558
+    },
+    {
+      "name": "/layers.4/self_attn/v_proj/MatMul",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 157213
+    },
+    {
+      "name": "/layers.4/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6767416
+    },
+    {
+      "name": "/layers.4/self_attn/v_proj/Add",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 875685
+    },
+    {
+      "name": "node_Mul_24",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1196747
+    },
+    {
+      "name": "node_Add_26",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2655687
+    },
+    {
+      "name": "/layers.4/self_attn/Transpose_2",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 90722
+    },
+    {
+      "name": "/layers.4/self_attn/Reshape_2",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/Reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/Transpose_1",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 546926
+    },
+    {
+      "name": "/layers.4/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 712171
+    },
+    {
+      "name": "/layers.4/self_attn/Transpose",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 534933
+    },
+    {
+      "name": "/layers.4/self_attn/MatMul",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1835939
+    },
+    {
+      "name": "/layers.4/self_attn/Softmax",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/MatMul_1",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5376193
+    },
+    {
+      "name": "/layers.4/self_attn/Transpose_3",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/Reshape_3",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/out_proj/MatMul",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 171494
+    },
+    {
+      "name": "/layers.4/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6250185
+    },
+    {
+      "name": "/layers.4/self_attn/out_proj/Add",
+      "type": "/layers.4/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1052753
+    },
+    {
+      "name": "/layers.4/Add",
+      "type": "/layers.4/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 614911
+    },
+    {
+      "name": "/layers.4/final_layer_norm/LayerNormalization",
+      "type": "/layers.4/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1256425
+    },
+    {
+      "name": "/layers.4/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.4/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3043982
+    },
+    {
+      "name": "/layers.4/fc1/MatMul_pre_reshape",
+      "type": "/layers.4/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/fc1/MatMul",
+      "type": "/layers.4/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 776435
+    },
+    {
+      "name": "/layers.4/fc1/MatMul_post_reshape",
+      "type": "/layers.4/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.4/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26246664
+    },
+    {
+      "name": "/layers.4/fc1/Add",
+      "type": "/layers.4/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 4014466
+    },
+    {
+      "name": "/layers.4/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.4/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11953561
+    },
+    {
+      "name": "_elementwiseneuron_6",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 923433
+    },
+    {
+      "name": "/layers.4/fc2/MatMul_pre_reshape",
+      "type": "/layers.4/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/fc2/MatMul",
+      "type": "/layers.4/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 786114
+    },
+    {
+      "name": "/layers.4/fc2/MatMul_post_reshape",
+      "type": "/layers.4/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.4/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.4/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5554837
+    },
+    {
+      "name": "/layers.4/fc2/Add",
+      "type": "/layers.4/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 966668
+    },
+    {
+      "name": "/layers.4/Add_1",
+      "type": "/layers.4/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 554354
+    },
+    {
+      "name": "/layers.5/self_attn_layer_norm/LayerNormalization",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1202133
+    },
+    {
+      "name": "/layers.5/self_attn_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3054590
+    },
+    {
+      "name": "/layers.5/self_attn/v_proj/MatMul_pre_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/k_proj/MatMul_pre_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/q_proj/MatMul_pre_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/q_proj/MatMul",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 242365
+    },
+    {
+      "name": "/layers.5/self_attn/q_proj/MatMul_post_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/q_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1100535
+    },
+    {
+      "name": "/layers.5/self_attn/k_proj/MatMul",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 320455
+    },
+    {
+      "name": "/layers.5/self_attn/k_proj/MatMul_post_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 75074
+    },
+    {
+      "name": "/layers.5/self_attn/v_proj/MatMul",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 174208
+    },
+    {
+      "name": "/layers.5/self_attn/v_proj/MatMul_post_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/v_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6194943
+    },
+    {
+      "name": "/layers.5/self_attn/v_proj/Add",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 847016
+    },
+    {
+      "name": "node_Mul_27",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1208214
+    },
+    {
+      "name": "node_Add_29",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2707624
+    },
+    {
+      "name": "/layers.5/self_attn/Transpose_2",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 89505
+    },
+    {
+      "name": "/layers.5/self_attn/Reshape_2",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/Reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/Transpose_1",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 519515
+    },
+    {
+      "name": "/layers.5/self_attn/Transpose_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 715575
+    },
+    {
+      "name": "/layers.5/self_attn/Transpose",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/Mul_1_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 545700
+    },
+    {
+      "name": "/layers.5/self_attn/MatMul",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1845136
+    },
+    {
+      "name": "/layers.5/self_attn/Softmax",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/MatMul_1",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5384579
+    },
+    {
+      "name": "/layers.5/self_attn/Transpose_3",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/Reshape_3",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/out_proj/MatMul",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 166899
+    },
+    {
+      "name": "/layers.5/self_attn/out_proj/MatMul_post_reshape",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/self_attn/out_proj/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6106231
+    },
+    {
+      "name": "/layers.5/self_attn/out_proj/Add",
+      "type": "/layers.5/self",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1029304
+    },
+    {
+      "name": "/layers.5/Add",
+      "type": "/layers.5/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 679175
+    },
+    {
+      "name": "/layers.5/final_layer_norm/LayerNormalization",
+      "type": "/layers.5/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1269418
+    },
+    {
+      "name": "/layers.5/final_layer_norm/LayerNormalization_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.5/final",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3032563
+    },
+    {
+      "name": "/layers.5/fc1/MatMul_pre_reshape",
+      "type": "/layers.5/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/fc1/MatMul",
+      "type": "/layers.5/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 793952
+    },
+    {
+      "name": "/layers.5/fc1/MatMul_post_reshape",
+      "type": "/layers.5/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/fc1/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.5/fc1/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24455434
+    },
+    {
+      "name": "/layers.5/fc1/Add",
+      "type": "/layers.5/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 3789510
+    },
+    {
+      "name": "/layers.5/fc1/Add_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "/layers.5/fc1/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11973022
+    },
+    {
+      "name": "_elementwiseneuron_7",
+      "type": "elementwiseneuron",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 929983
+    },
+    {
+      "name": "/layers.5/fc2/MatMul_pre_reshape",
+      "type": "/layers.5/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/fc2/MatMul",
+      "type": "/layers.5/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 730375
+    },
+    {
+      "name": "/layers.5/fc2/MatMul_post_reshape",
+      "type": "/layers.5/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "/layers.5/fc2/MatMul_output_0_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "/layers.5/fc2/MatMul",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 5284422
+    },
+    {
+      "name": "/layers.5/fc2/Add",
+      "type": "/layers.5/fc2/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1040907
+    },
+    {
+      "name": "/layers.5/Add_1",
+      "type": "/layers.5/Add",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 513071
+    },
+    {
+      "name": "/layer_norm/LayerNormalization",
+      "type": "/layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1181085
+    },
+    {
+      "name": "QNN_DATATYPE_FLOAT_16_converted_output_0_QNN_DATATYPE_FLOAT_32",
+      "type": "QNN",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 626026
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115668
+    }
+  ]
+}

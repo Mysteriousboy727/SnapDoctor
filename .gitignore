@@ -5,3 +5,4 @@ __pycache__/
 data/models/
 data/logs/
 .ipynb_checkpoints/
+data/

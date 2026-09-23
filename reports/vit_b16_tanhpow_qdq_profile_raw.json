@@ -1,0 +1,4124 @@
+{
+  "execution_summary": {
+    "estimated_inference_time": 52513,
+    "estimated_inference_peak_memory": 15634432,
+    "first_load_time": 25546135,
+    "first_load_peak_memory": 603844608,
+    "warm_load_time": 300118,
+    "warm_load_peak_memory": 15187968,
+    "compile_time": 0,
+    "compile_peak_memory": 0,
+    "compile_memory_increase_range": [
+      0,
+      0
+    ],
+    "compile_memory_peak_range": [
+      0,
+      0
+    ],
+    "first_load_memory_increase_range": [
+      475586560,
+      475586560
+    ],
+    "first_load_memory_peak_range": [
+      598900736,
+      598900736
+    ],
+    "warm_load_memory_increase_range": [
+      10190848,
+      10190848
+    ],
+    "warm_load_memory_peak_range": [
+      10199040,
+      10199040
+    ],
+    "inference_memory_increase_range": [
+      610304,
+      610304
+    ],
+    "inference_memory_peak_range": [
+      610304,
+      610304
+    ],
+    "all_compile_times": [],
+    "all_first_load_times": [
+      25546135
+    ],
+    "all_warm_load_times": [
+      300118
+    ],
+    "all_inference_times": [
+      53737,
+      52586,
+      52636,
+      52646,
+      52572,
+      52570,
+      52596,
+      52604,
+      52614,
+      52700,
+      52741,
+      52619,
+      52945,
+      52766,
+      52626,
+      52871,
+      52758,
+      52584,
+      52798,
+      52581,
+      52611,
+      52644,
+      52621,
+      52661,
+      52664,
+      52644,
+      52655,
+      52630,
+      52614,
+      52640,
+      52695,
+      52769,
+      52669,
+      52737,
+      52781,
+      52554,
+      52593,
+      52605,
+      52647,
+      52553,
+      52933,
+      52589,
+      52538,
+      52719,
+      52728,
+      52974,
+      52739,
+      52634,
+      52753,
+      52577,
+      52667,
+      52607,
+      52559,
+      52690,
+      52589,
+      52573,
+      52739,
+      52570,
+      52587,
+      52570,
+      52635,
+      52678,
+      52627,
+      52601,
+      52634,
+      52728,
+      52788,
+      52541,
+      52597,
+      52622,
+      52586,
+      52658,
+      52619,
+      52786,
+      52607,
+      52656,
+      52572,
+      52544,
+      52588,
+      52813,
+      52621,
+      52583,
+      52573,
+      52658,
+      52672,
+      52691,
+      52721,
+      52652,
+      52560,
+      52681,
+      52714,
+      52651,
+      52588,
+      52587,
+      52609,
+      52643,
+      52513,
+      52676,
+      52744,
+      52544
+    ]
+  },
+  "execution_detail": [
+    {
+      "name": "Input",
+      "type": "Input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 12396
+    },
+    {
+      "name": "QNN_DATATYPE_FLOAT_32_converted_input_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "QNN",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 64434
+    },
+    {
+      "name": "input_hoist_0231",
+      "type": "input",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 16761
+    },
+    {
+      "name": "node_conv2d",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103059
+    },
+    {
+      "name": "node_view",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 14218
+    },
+    {
+      "name": "permute_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "permute",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 109672
+    },
+    {
+      "name": "OpId_35",
+      "type": "",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 121
+    },
+    {
+      "name": "node_cat",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 19711
+    },
+    {
+      "name": "node_add",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 116291
+    },
+    {
+      "name": "node_layer_norm",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 233577
+    },
+    {
+      "name": "node_Reshape_49",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58060
+    },
+    {
+      "name": "transpose_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 352121
+    },
+    {
+      "name": "node_MatMul_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 279523
+    },
+    {
+      "name": "node_MatMul_11_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_13_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 275941
+    },
+    {
+      "name": "node_linear",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1525819
+    },
+    {
+      "name": "node_Reshape_450",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 108242
+    },
+    {
+      "name": "node_Transpose_271",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 48185
+    },
+    {
+      "name": "node_select",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28979
+    },
+    {
+      "name": "node_select_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6847
+    },
+    {
+      "name": "Reshape_post_node_select_1",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17262
+    },
+    {
+      "name": "node_select_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 6883
+    },
+    {
+      "name": "Reshape_post_node_select_2",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_124",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28029
+    },
+    {
+      "name": "node_Transpose_128",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10633
+    },
+    {
+      "name": "view_7_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 77434
+    },
+    {
+      "name": "node_Mul_79",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74667
+    },
+    {
+      "name": "val_81_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 102351
+    },
+    {
+      "name": "node_Transpose_132",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 47428
+    },
+    {
+      "name": "node_Mul_82",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74668
+    },
+    {
+      "name": "val_84_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 148681
+    },
+    {
+      "name": "node_MatMul_83",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 169184
+    },
+    {
+      "name": "node_Softmax_84",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 444104
+    },
+    {
+      "name": "node_permute_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 86288
+    },
+    {
+      "name": "node_Reshape_352",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_5_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 170334
+    },
+    {
+      "name": "node_add_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 94021
+    },
+    {
+      "name": "node_layer_norm_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 201613
+    },
+    {
+      "name": "layer_norm_1_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 608960
+    },
+    {
+      "name": "node_MatMul_95_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_95",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 312254
+    },
+    {
+      "name": "node_MatMul_95_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_99_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 558184
+    },
+    {
+      "name": "node_linear_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2091073
+    },
+    {
+      "name": "node_Gelu_364",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10613368
+    },
+    {
+      "name": "gelu_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2383329
+    },
+    {
+      "name": "node_MatMul_104_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_104",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318344
+    },
+    {
+      "name": "node_MatMul_104_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_108_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 181219
+    },
+    {
+      "name": "node_linear_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 549900
+    },
+    {
+      "name": "node_add_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28269
+    },
+    {
+      "name": "node_layer_norm_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197446
+    },
+    {
+      "name": "node_Reshape_53",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57989
+    },
+    {
+      "name": "transpose_6_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315012
+    },
+    {
+      "name": "node_MatMul_106",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 256776
+    },
+    {
+      "name": "node_MatMul_106_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_112_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 273974
+    },
+    {
+      "name": "node_linear_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1503910
+    },
+    {
+      "name": "node_Reshape_452",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115433
+    },
+    {
+      "name": "node_Transpose_275",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 47948
+    },
+    {
+      "name": "node_select_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_3",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 33090
+    },
+    {
+      "name": "node_select_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9416
+    },
+    {
+      "name": "Reshape_post_node_select_4",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17384
+    },
+    {
+      "name": "node_select_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9576
+    },
+    {
+      "name": "Reshape_post_node_select_5",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_136",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 21951
+    },
+    {
+      "name": "node_Transpose_140",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10176
+    },
+    {
+      "name": "view_16_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 71601
+    },
+    {
+      "name": "node_Mul_168",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 68989
+    },
+    {
+      "name": "val_174_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 102650
+    },
+    {
+      "name": "node_Transpose_144",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46942
+    },
+    {
+      "name": "node_Mul_171",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 75563
+    },
+    {
+      "name": "val_177_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143955
+    },
+    {
+      "name": "node_MatMul_172",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 166769
+    },
+    {
+      "name": "node_Softmax_173",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_1",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 384735
+    },
+    {
+      "name": "node_permute_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80715
+    },
+    {
+      "name": "node_Reshape_353",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_11_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 170636
+    },
+    {
+      "name": "node_add_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 84569
+    },
+    {
+      "name": "node_layer_norm_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 207732
+    },
+    {
+      "name": "layer_norm_3_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 609523
+    },
+    {
+      "name": "node_MatMul_184_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_184",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 299987
+    },
+    {
+      "name": "node_MatMul_184_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_192_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 562029
+    },
+    {
+      "name": "node_linear_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2081856
+    },
+    {
+      "name": "node_Gelu_365",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10583192
+    },
+    {
+      "name": "gelu_1_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2394184
+    },
+    {
+      "name": "node_MatMul_193_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_193",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318957
+    },
+    {
+      "name": "node_MatMul_193_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_201_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 188337
+    },
+    {
+      "name": "node_linear_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 561441
+    },
+    {
+      "name": "node_add_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28139
+    },
+    {
+      "name": "node_layer_norm_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 196264
+    },
+    {
+      "name": "node_Reshape_57",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57227
+    },
+    {
+      "name": "transpose_12_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 313710
+    },
+    {
+      "name": "node_MatMul_195",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 255730
+    },
+    {
+      "name": "node_MatMul_195_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_205_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 274234
+    },
+    {
+      "name": "node_linear_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1517171
+    },
+    {
+      "name": "node_Reshape_454",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 111718
+    },
+    {
+      "name": "node_Transpose_279",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44163
+    },
+    {
+      "name": "node_select_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_6",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28346
+    },
+    {
+      "name": "node_select_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8942
+    },
+    {
+      "name": "Reshape_post_node_select_7",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17677
+    },
+    {
+      "name": "node_select_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9711
+    },
+    {
+      "name": "Reshape_post_node_select_8",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_148",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23348
+    },
+    {
+      "name": "node_Transpose_152",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10154
+    },
+    {
+      "name": "view_25_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 71854
+    },
+    {
+      "name": "node_Mul_257",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 70141
+    },
+    {
+      "name": "val_267_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103805
+    },
+    {
+      "name": "node_Transpose_156",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46777
+    },
+    {
+      "name": "node_Mul_260",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 76115
+    },
+    {
+      "name": "val_270_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 145258
+    },
+    {
+      "name": "node_MatMul_261",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 165325
+    },
+    {
+      "name": "node_Softmax_262",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_2",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 383159
+    },
+    {
+      "name": "node_permute_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 78521
+    },
+    {
+      "name": "node_Reshape_354",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_17_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 169126
+    },
+    {
+      "name": "node_add_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 85676
+    },
+    {
+      "name": "node_layer_norm_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 203068
+    },
+    {
+      "name": "layer_norm_5_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 611082
+    },
+    {
+      "name": "node_MatMul_273_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_273",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 280408
+    },
+    {
+      "name": "node_MatMul_273_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_285_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 564977
+    },
+    {
+      "name": "node_linear_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2105622
+    },
+    {
+      "name": "node_Gelu_366",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10577282
+    },
+    {
+      "name": "gelu_2_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2398922
+    },
+    {
+      "name": "node_MatMul_282_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_282",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318800
+    },
+    {
+      "name": "node_MatMul_282_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_294_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 189588
+    },
+    {
+      "name": "node_linear_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 563897
+    },
+    {
+      "name": "node_add_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28630
+    },
+    {
+      "name": "node_layer_norm_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197604
+    },
+    {
+      "name": "node_Reshape_61",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 56952
+    },
+    {
+      "name": "transpose_18_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 313904
+    },
+    {
+      "name": "node_MatMul_284",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 256225
+    },
+    {
+      "name": "node_MatMul_284_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_298_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 275330
+    },
+    {
+      "name": "node_linear_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1521210
+    },
+    {
+      "name": "node_Reshape_456",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117235
+    },
+    {
+      "name": "node_Transpose_283",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44564
+    },
+    {
+      "name": "node_select_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_9",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30740
+    },
+    {
+      "name": "node_select_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9009
+    },
+    {
+      "name": "Reshape_post_node_select_10",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17642
+    },
+    {
+      "name": "node_select_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9610
+    },
+    {
+      "name": "Reshape_post_node_select_11",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_160",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23639
+    },
+    {
+      "name": "node_Transpose_165",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10505
+    },
+    {
+      "name": "view_34_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74405
+    },
+    {
+      "name": "node_Mul_346",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 68186
+    },
+    {
+      "name": "val_360_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 102814
+    },
+    {
+      "name": "node_Transpose_170",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46523
+    },
+    {
+      "name": "node_Mul_349",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74593
+    },
+    {
+      "name": "val_363_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 146032
+    },
+    {
+      "name": "node_MatMul_350",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 164653
+    },
+    {
+      "name": "node_Softmax_351",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_3",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 384848
+    },
+    {
+      "name": "node_permute_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_13",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 79426
+    },
+    {
+      "name": "node_Reshape_355",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_23_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 169509
+    },
+    {
+      "name": "node_add_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 84037
+    },
+    {
+      "name": "node_layer_norm_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 207760
+    },
+    {
+      "name": "layer_norm_7_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 610253
+    },
+    {
+      "name": "node_MatMul_362_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_362",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 273649
+    },
+    {
+      "name": "node_MatMul_362_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_378_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 561395
+    },
+    {
+      "name": "node_linear_14",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2114073
+    },
+    {
+      "name": "node_Gelu_367",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10552743
+    },
+    {
+      "name": "gelu_3_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2384053
+    },
+    {
+      "name": "node_MatMul_371_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_371",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 317730
+    },
+    {
+      "name": "node_MatMul_371_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_387_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 196349
+    },
+    {
+      "name": "node_linear_15",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 555158
+    },
+    {
+      "name": "node_add_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30145
+    },
+    {
+      "name": "node_layer_norm_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 198426
+    },
+    {
+      "name": "node_Reshape_65",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57751
+    },
+    {
+      "name": "transpose_24_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 314544
+    },
+    {
+      "name": "node_MatMul_373",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 257328
+    },
+    {
+      "name": "node_MatMul_373_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_391_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 281121
+    },
+    {
+      "name": "node_linear_16",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1511093
+    },
+    {
+      "name": "node_Reshape_458",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 117132
+    },
+    {
+      "name": "node_Transpose_287",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 45588
+    },
+    {
+      "name": "node_select_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_12",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29653
+    },
+    {
+      "name": "node_select_13",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8802
+    },
+    {
+      "name": "Reshape_post_node_select_13",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17459
+    },
+    {
+      "name": "node_select_14",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8796
+    },
+    {
+      "name": "Reshape_post_node_select_14",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_174",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23082
+    },
+    {
+      "name": "node_Transpose_178",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10147
+    },
+    {
+      "name": "view_43_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 70690
+    },
+    {
+      "name": "node_Mul_435",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 69756
+    },
+    {
+      "name": "val_453_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103786
+    },
+    {
+      "name": "node_Transpose_182",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 45514
+    },
+    {
+      "name": "node_Mul_438",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 75573
+    },
+    {
+      "name": "val_456_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143120
+    },
+    {
+      "name": "node_MatMul_439",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 167285
+    },
+    {
+      "name": "node_Softmax_440",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_4",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 390685
+    },
+    {
+      "name": "node_permute_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_17",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 79930
+    },
+    {
+      "name": "node_Reshape_356",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_29_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 168970
+    },
+    {
+      "name": "node_add_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 84988
+    },
+    {
+      "name": "node_layer_norm_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 217312
+    },
+    {
+      "name": "layer_norm_9_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 610116
+    },
+    {
+      "name": "node_MatMul_451_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_451",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 265445
+    },
+    {
+      "name": "node_MatMul_451_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_471_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 582482
+    },
+    {
+      "name": "node_linear_18",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2122382
+    },
+    {
+      "name": "node_Gelu_368",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10589224
+    },
+    {
+      "name": "gelu_4_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2401725
+    },
+    {
+      "name": "node_MatMul_460_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_460",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318659
+    },
+    {
+      "name": "node_MatMul_460_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_480_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200556
+    },
+    {
+      "name": "node_linear_19",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 567164
+    },
+    {
+      "name": "node_add_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28625
+    },
+    {
+      "name": "node_layer_norm_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 200582
+    },
+    {
+      "name": "node_Reshape_69",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58463
+    },
+    {
+      "name": "transpose_30_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315692
+    },
+    {
+      "name": "node_MatMul_462",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 259430
+    },
+    {
+      "name": "node_MatMul_462_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_484_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 278002
+    },
+    {
+      "name": "node_linear_20",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1506778
+    },
+    {
+      "name": "node_Reshape_460",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 111669
+    },
+    {
+      "name": "node_Transpose_291",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44356
+    },
+    {
+      "name": "node_select_15",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_15",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28389
+    },
+    {
+      "name": "node_select_16",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9207
+    },
+    {
+      "name": "Reshape_post_node_select_16",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17178
+    },
+    {
+      "name": "node_select_17",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9165
+    },
+    {
+      "name": "Reshape_post_node_select_17",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_186",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 22377
+    },
+    {
+      "name": "node_Transpose_190",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10136
+    },
+    {
+      "name": "view_52_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72319
+    },
+    {
+      "name": "node_Mul_524",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 70211
+    },
+    {
+      "name": "val_546_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105312
+    },
+    {
+      "name": "node_Transpose_194",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 45588
+    },
+    {
+      "name": "node_Mul_527",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74641
+    },
+    {
+      "name": "val_549_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 145180
+    },
+    {
+      "name": "node_MatMul_528",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 167960
+    },
+    {
+      "name": "node_Softmax_529",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_5",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 385051
+    },
+    {
+      "name": "node_permute_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_21",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80889
+    },
+    {
+      "name": "node_Reshape_357",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_35_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 169557
+    },
+    {
+      "name": "node_add_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 83147
+    },
+    {
+      "name": "node_layer_norm_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 211150
+    },
+    {
+      "name": "layer_norm_11_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 613015
+    },
+    {
+      "name": "node_MatMul_540_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_540",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 263707
+    },
+    {
+      "name": "node_MatMul_540_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_564_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 567176
+    },
+    {
+      "name": "node_linear_22",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2096217
+    },
+    {
+      "name": "node_Gelu_369",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10558592
+    },
+    {
+      "name": "gelu_5_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2405517
+    },
+    {
+      "name": "node_MatMul_549_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_549",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318653
+    },
+    {
+      "name": "node_MatMul_549_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_573_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197303
+    },
+    {
+      "name": "node_linear_23",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 565065
+    },
+    {
+      "name": "node_add_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30580
+    },
+    {
+      "name": "node_layer_norm_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 213494
+    },
+    {
+      "name": "node_Reshape_73",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57279
+    },
+    {
+      "name": "transpose_36_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 313128
+    },
+    {
+      "name": "node_MatMul_551",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 257532
+    },
+    {
+      "name": "node_MatMul_551_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_577_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 275787
+    },
+    {
+      "name": "node_linear_24",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1509162
+    },
+    {
+      "name": "node_Reshape_462",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 113802
+    },
+    {
+      "name": "node_Transpose_295",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46528
+    },
+    {
+      "name": "node_select_18",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_18",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32150
+    },
+    {
+      "name": "node_select_19",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9378
+    },
+    {
+      "name": "Reshape_post_node_select_19",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17494
+    },
+    {
+      "name": "node_select_20",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9299
+    },
+    {
+      "name": "Reshape_post_node_select_20",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_198",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23140
+    },
+    {
+      "name": "node_Transpose_202",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10115
+    },
+    {
+      "name": "view_61_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72998
+    },
+    {
+      "name": "node_Mul_613",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 68249
+    },
+    {
+      "name": "val_639_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103413
+    },
+    {
+      "name": "node_Transpose_206",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46500
+    },
+    {
+      "name": "node_Mul_616",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 75484
+    },
+    {
+      "name": "val_642_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143521
+    },
+    {
+      "name": "node_MatMul_617",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 165890
+    },
+    {
+      "name": "node_Softmax_618",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_6",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 381250
+    },
+    {
+      "name": "node_permute_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_25",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80391
+    },
+    {
+      "name": "node_Reshape_358",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_41_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 168714
+    },
+    {
+      "name": "node_add_13",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 83196
+    },
+    {
+      "name": "node_layer_norm_13",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 202625
+    },
+    {
+      "name": "layer_norm_13_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 609999
+    },
+    {
+      "name": "node_MatMul_629_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_629",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 265947
+    },
+    {
+      "name": "node_MatMul_629_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_657_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 577538
+    },
+    {
+      "name": "node_linear_26",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2106504
+    },
+    {
+      "name": "node_Gelu_370",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10561931
+    },
+    {
+      "name": "gelu_6_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2401193
+    },
+    {
+      "name": "node_MatMul_638_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_638",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318674
+    },
+    {
+      "name": "node_MatMul_638_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_666_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197505
+    },
+    {
+      "name": "node_linear_27",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 588325
+    },
+    {
+      "name": "node_add_14",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28827
+    },
+    {
+      "name": "node_layer_norm_14",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 202107
+    },
+    {
+      "name": "node_Reshape_78",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57218
+    },
+    {
+      "name": "transpose_42_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315278
+    },
+    {
+      "name": "node_MatMul_640",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 257995
+    },
+    {
+      "name": "node_MatMul_640_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_670_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 276496
+    },
+    {
+      "name": "node_linear_28",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1508830
+    },
+    {
+      "name": "node_Reshape_464",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 114159
+    },
+    {
+      "name": "node_Transpose_299",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 43916
+    },
+    {
+      "name": "node_select_21",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_21",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30705
+    },
+    {
+      "name": "node_select_22",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8440
+    },
+    {
+      "name": "Reshape_post_node_select_22",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17690
+    },
+    {
+      "name": "node_select_23",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8591
+    },
+    {
+      "name": "Reshape_post_node_select_23",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_210",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 25826
+    },
+    {
+      "name": "node_Transpose_214",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10032
+    },
+    {
+      "name": "view_70_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72311
+    },
+    {
+      "name": "node_Mul_702",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 69994
+    },
+    {
+      "name": "val_732_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 103953
+    },
+    {
+      "name": "node_Transpose_218",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 49884
+    },
+    {
+      "name": "node_Mul_705",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74513
+    },
+    {
+      "name": "val_735_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 149429
+    },
+    {
+      "name": "node_MatMul_706",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 168683
+    },
+    {
+      "name": "node_Softmax_707",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_7",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 393924
+    },
+    {
+      "name": "node_permute_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_29",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80339
+    },
+    {
+      "name": "node_Reshape_359",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_47_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 169089
+    },
+    {
+      "name": "node_add_15",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 82397
+    },
+    {
+      "name": "node_layer_norm_15",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 207007
+    },
+    {
+      "name": "layer_norm_15_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 612155
+    },
+    {
+      "name": "node_MatMul_718_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_718",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 268711
+    },
+    {
+      "name": "node_MatMul_718_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_750_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 574480
+    },
+    {
+      "name": "node_linear_30",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2091795
+    },
+    {
+      "name": "node_Gelu_371",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10562293
+    },
+    {
+      "name": "gelu_7_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2386310
+    },
+    {
+      "name": "node_MatMul_727_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_727",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 319290
+    },
+    {
+      "name": "node_MatMul_727_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_759_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 192654
+    },
+    {
+      "name": "node_linear_31",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 558535
+    },
+    {
+      "name": "node_add_16",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28693
+    },
+    {
+      "name": "node_layer_norm_16",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204963
+    },
+    {
+      "name": "node_Reshape_82",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58028
+    },
+    {
+      "name": "transpose_48_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315141
+    },
+    {
+      "name": "node_MatMul_729",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 258221
+    },
+    {
+      "name": "node_MatMul_729_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_763_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 277992
+    },
+    {
+      "name": "node_linear_32",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1510856
+    },
+    {
+      "name": "node_Reshape_466",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 116564
+    },
+    {
+      "name": "node_Transpose_303",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44100
+    },
+    {
+      "name": "node_select_24",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_24",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 30039
+    },
+    {
+      "name": "node_select_25",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7186
+    },
+    {
+      "name": "Reshape_post_node_select_25",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17711
+    },
+    {
+      "name": "node_select_26",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7216
+    },
+    {
+      "name": "Reshape_post_node_select_26",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_222",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 27714
+    },
+    {
+      "name": "node_Transpose_226",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10114
+    },
+    {
+      "name": "view_79_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 71194
+    },
+    {
+      "name": "node_Mul_791",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 69599
+    },
+    {
+      "name": "val_825_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 105204
+    },
+    {
+      "name": "node_Transpose_230",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 45987
+    },
+    {
+      "name": "node_Mul_794",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 75048
+    },
+    {
+      "name": "val_828_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 146021
+    },
+    {
+      "name": "node_MatMul_795",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 166161
+    },
+    {
+      "name": "node_Softmax_796",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_8",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 384568
+    },
+    {
+      "name": "node_permute_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_33",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80362
+    },
+    {
+      "name": "node_Reshape_360",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_53_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 168528
+    },
+    {
+      "name": "node_add_17",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80486
+    },
+    {
+      "name": "node_layer_norm_17",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 202164
+    },
+    {
+      "name": "layer_norm_17_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 611627
+    },
+    {
+      "name": "node_MatMul_807_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_807",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 265374
+    },
+    {
+      "name": "node_MatMul_807_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_843_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 572434
+    },
+    {
+      "name": "node_linear_34",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2101933
+    },
+    {
+      "name": "node_Gelu_372",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10570521
+    },
+    {
+      "name": "gelu_8_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2407167
+    },
+    {
+      "name": "node_MatMul_816_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_816",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 318212
+    },
+    {
+      "name": "node_MatMul_816_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_852_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 194873
+    },
+    {
+      "name": "node_linear_35",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 571365
+    },
+    {
+      "name": "node_add_18",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29888
+    },
+    {
+      "name": "node_layer_norm_18",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 202039
+    },
+    {
+      "name": "node_Reshape_86",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58507
+    },
+    {
+      "name": "transpose_54_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 314396
+    },
+    {
+      "name": "node_MatMul_818",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 259020
+    },
+    {
+      "name": "node_MatMul_818_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_856_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 274948
+    },
+    {
+      "name": "node_linear_36",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1509126
+    },
+    {
+      "name": "node_Reshape_468",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 115844
+    },
+    {
+      "name": "node_Transpose_307",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44419
+    },
+    {
+      "name": "node_select_27",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_27",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 28301
+    },
+    {
+      "name": "node_select_28",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8963
+    },
+    {
+      "name": "Reshape_post_node_select_28",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17423
+    },
+    {
+      "name": "node_select_29",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8656
+    },
+    {
+      "name": "Reshape_post_node_select_29",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_234",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 23587
+    },
+    {
+      "name": "node_Transpose_238",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10411
+    },
+    {
+      "name": "view_88_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72400
+    },
+    {
+      "name": "node_Mul_880",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 69771
+    },
+    {
+      "name": "val_918_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104459
+    },
+    {
+      "name": "node_Transpose_242",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 45034
+    },
+    {
+      "name": "node_Mul_883",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74586
+    },
+    {
+      "name": "val_921_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 143298
+    },
+    {
+      "name": "node_MatMul_884",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 163889
+    },
+    {
+      "name": "node_Softmax_885",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_9",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 378819
+    },
+    {
+      "name": "node_permute_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_37",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80476
+    },
+    {
+      "name": "node_Reshape_361",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_59_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 170035
+    },
+    {
+      "name": "node_add_19",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 85082
+    },
+    {
+      "name": "node_layer_norm_19",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 209989
+    },
+    {
+      "name": "layer_norm_19_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 610791
+    },
+    {
+      "name": "node_MatMul_896_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_896",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 262588
+    },
+    {
+      "name": "node_MatMul_896_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_936_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 575783
+    },
+    {
+      "name": "node_linear_38",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2119942
+    },
+    {
+      "name": "node_Gelu_373",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10532939
+    },
+    {
+      "name": "gelu_9_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2404049
+    },
+    {
+      "name": "node_MatMul_905_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_905",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 320715
+    },
+    {
+      "name": "node_MatMul_905_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_945_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 201002
+    },
+    {
+      "name": "node_linear_39",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 581262
+    },
+    {
+      "name": "node_add_20",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29904
+    },
+    {
+      "name": "node_layer_norm_20",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 199258
+    },
+    {
+      "name": "node_Reshape_90",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 57226
+    },
+    {
+      "name": "transpose_60_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 316055
+    },
+    {
+      "name": "node_MatMul_907",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 259582
+    },
+    {
+      "name": "node_MatMul_907_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_949_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 276570
+    },
+    {
+      "name": "node_linear_40",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1506474
+    },
+    {
+      "name": "node_Reshape_470",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 114163
+    },
+    {
+      "name": "node_Transpose_311",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 44382
+    },
+    {
+      "name": "node_select_30",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_30",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29157
+    },
+    {
+      "name": "node_select_31",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 9216
+    },
+    {
+      "name": "Reshape_post_node_select_31",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 17929
+    },
+    {
+      "name": "node_select_32",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 8584
+    },
+    {
+      "name": "Reshape_post_node_select_32",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_246",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 24902
+    },
+    {
+      "name": "node_Transpose_250",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10171
+    },
+    {
+      "name": "view_97_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 71740
+    },
+    {
+      "name": "node_Mul_969",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 68407
+    },
+    {
+      "name": "val_1011_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 102860
+    },
+    {
+      "name": "node_Transpose_254",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46387
+    },
+    {
+      "name": "node_Mul_972",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74055
+    },
+    {
+      "name": "val_1014_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 147495
+    },
+    {
+      "name": "node_MatMul_973",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104482
+    },
+    {
+      "name": "node_Softmax_974",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_10",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 386101
+    },
+    {
+      "name": "node_permute_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_41",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80412
+    },
+    {
+      "name": "node_Reshape_362",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_65_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 172745
+    },
+    {
+      "name": "node_add_21",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 82377
+    },
+    {
+      "name": "node_layer_norm_21",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204412
+    },
+    {
+      "name": "layer_norm_21_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 611193
+    },
+    {
+      "name": "node_MatMul_985_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_985",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 266211
+    },
+    {
+      "name": "node_MatMul_985_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_1029_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 582830
+    },
+    {
+      "name": "node_linear_42",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2119700
+    },
+    {
+      "name": "node_Gelu_374",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10548906
+    },
+    {
+      "name": "gelu_10_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2406231
+    },
+    {
+      "name": "node_MatMul_994_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_994",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 324924
+    },
+    {
+      "name": "node_MatMul_994_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_1038_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 199278
+    },
+    {
+      "name": "node_linear_43",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 575769
+    },
+    {
+      "name": "node_add_22",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29002
+    },
+    {
+      "name": "node_layer_norm_22",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 196193
+    },
+    {
+      "name": "node_Reshape_94",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 58302
+    },
+    {
+      "name": "transpose_66_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315866
+    },
+    {
+      "name": "node_MatMul_996",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 259836
+    },
+    {
+      "name": "node_MatMul_996_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_1042_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 278941
+    },
+    {
+      "name": "node_linear_44",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 1515105
+    },
+    {
+      "name": "node_Reshape_472",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 118487
+    },
+    {
+      "name": "node_Transpose_315",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 43196
+    },
+    {
+      "name": "node_select_33",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Reshape_post_node_select_33",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 32149
+    },
+    {
+      "name": "node_select_34",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7888
+    },
+    {
+      "name": "Reshape_post_node_select_34",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 18050
+    },
+    {
+      "name": "node_select_35",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7941
+    },
+    {
+      "name": "Reshape_post_node_select_35",
+      "type": "Reshape",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_Transpose_259",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 26708
+    },
+    {
+      "name": "node_Transpose_263",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10169
+    },
+    {
+      "name": "view_106_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "view",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 72506
+    },
+    {
+      "name": "node_Mul_1058",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 70374
+    },
+    {
+      "name": "val_1104_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 104441
+    },
+    {
+      "name": "node_Transpose_267",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 46266
+    },
+    {
+      "name": "node_Mul_1061",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 74967
+    },
+    {
+      "name": "val_1107_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 147896
+    },
+    {
+      "name": "node_MatMul_1062",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 167919
+    },
+    {
+      "name": "node_Softmax_1063",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_scaled_dot_product_attention_11",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 388730
+    },
+    {
+      "name": "node_permute_12",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_linear_45",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 80368
+    },
+    {
+      "name": "node_Reshape_363",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "transpose_71_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "transpose",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 174290
+    },
+    {
+      "name": "node_add_23",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 77829
+    },
+    {
+      "name": "node_layer_norm_23",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 204059
+    },
+    {
+      "name": "layer_norm_23_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "layer",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 612313
+    },
+    {
+      "name": "node_MatMul_1074_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_1074",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 275266
+    },
+    {
+      "name": "node_MatMul_1074_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_1122_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 589983
+    },
+    {
+      "name": "node_linear_46",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2090441
+    },
+    {
+      "name": "node_Gelu_375",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10548465
+    },
+    {
+      "name": "gelu_11_DequantizeLinear_Output_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "gelu",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 2393437
+    },
+    {
+      "name": "node_MatMul_1083_pre_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "node_MatMul_1083",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 315223
+    },
+    {
+      "name": "node_MatMul_1083_post_reshape",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "val_1131_DequantizeLinear_Output_converted_QNN_DATATYPE_FLOAT_16",
+      "type": "val",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 197527
+    },
+    {
+      "name": "node_linear_47",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 566942
+    },
+    {
+      "name": "node_add_24",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 29473
+    },
+    {
+      "name": "node_layer_norm_24",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 37072
+    },
+    {
+      "name": "node_select_36",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "select_36_pre_reshape_converted_QNN_DATATYPE_UFIXED_POINT_8",
+      "type": "select",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 11744
+    },
+    {
+      "name": "node_linear_48",
+      "type": "node",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 7456
+    },
+    {
+      "name": "QNN_DATATYPE_UFIXED_POINT_8_converted_output_0_QNN_DATATYPE_FLOAT_32",
+      "type": "QNN",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 0
+    },
+    {
+      "name": "Output",
+      "type": "Output",
+      "compute_unit": "NPU",
+      "execution_time": 0,
+      "execution_cycles": 10525
+    }
+  ]
+}
