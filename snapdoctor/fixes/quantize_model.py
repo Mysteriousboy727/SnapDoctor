@@ -69,6 +69,24 @@ class ImageCalibrationDataReader(CalibrationDataReader):
         }
 
 
+class NpyCalibrationDataReader(CalibrationDataReader):
+    def __init__(self, calib_dir: str, input_name: str, limit: int = 200):
+        self.input_name = input_name
+        self.files = [
+            os.path.join(calib_dir, f)
+            for f in os.listdir(calib_dir)
+            if f.lower().endswith(".npy")
+        ][:limit]
+        self._iter = iter(self.files)
+
+    def get_next(self):
+        path = next(self._iter, None)
+        if path is None:
+            return None
+        arr = np.load(path).astype(np.float32)
+        return {self.input_name: arr}
+
+
 def get_model_input_info(input_path: str):
     """
     Load just the graph (with external data linked, load_external_data=True is
@@ -120,11 +138,22 @@ def quantize(
         )
 
     if calib_dir:
-        calib_reader = ImageCalibrationDataReader(
-            calib_dir,
-            input_name,
-            input_shape,
-        )
+        npy_files = [
+            f for f in os.listdir(calib_dir)
+            if f.lower().endswith(".npy")
+        ]
+
+        if npy_files:
+            calib_reader = NpyCalibrationDataReader(
+                calib_dir,
+                input_name,
+            )
+        else:
+            calib_reader = ImageCalibrationDataReader(
+                calib_dir,
+                input_name,
+                input_shape,
+            )
 
     else:
 
@@ -164,7 +193,7 @@ def quantize(
         reduce_range=False,
         use_external_data_format=False,
         op_types_to_quantize=["Conv", "MatMul", "Gemm", "Tanh", "Pow"],
-               extra_options={
+        extra_options={
             "ActivationSymmetric": False,
             "WeightSymmetric": True,
         },

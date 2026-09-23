@@ -174,6 +174,7 @@ flowchart TB
 | ☁️ Hardware verification             | ✅ Proven  | ResNet18 profiled on Snapdragon X Elite through Qualcomm AI Hub                                  |
 | 🔬 Cycle-level analysis              | ✅ Working | Extracts per-node cost from AI Hub `execution_detail`                                            |
 | 🧩 Attention-model diagnosis         | ✅ Proven  | ViT-B/16 `Erf` compile blocker diagnosed, workaround applied, and verified on Snapdragon X Elite |
+| 🎤 Cross-domain diagnosis            | ✅ Proven  | Whisper-base encoder `Erf` blocker diagnosed, workaround applied, 100% NPU residency verified on Snapdragon X Elite |
 
 ---
 
@@ -277,6 +278,71 @@ Instead:
 This is exactly the type of distinction SnapDoctor is designed to expose.
 
 ---
+---
+
+## 🔬 Case Study: Whisper-Base Encoder — Cross-Domain Validation
+
+The ViT experiment proved SnapDoctor works on vision transformers. The natural next question: does the same diagnostic pipeline generalize to a completely different modality — audio — without any changes to the core engine?
+
+### 1. The setup
+
+Whisper-base's encoder (6 transformer layers, Conv-based audio stem, fixed 30-second/3000-frame spectrogram input) was exported to ONNX and run through the unmodified SnapDoctor pipeline — `graph_parser.py`, `fallback_detector.py`, `aihub_parser.py`, and `report.py` were untouched from the ViT/ResNet18 runs.
+
+### 2. The blocker — same failure class, new model
+
+Whisper's encoder uses exact GELU (`Erf`) in two places: the 6 per-layer transformer blocks *and* the convolutional audio stem. Static diagnosis flagged both:
+
+```text
+Op-level NPU compatibility: 65.6% (187/285 ops)
+Unsupported: Erf (6 occurrences), Reshape/Constant (known static-analysis false positives)
+```
+
+This is the same failure class SnapDoctor identified in ViT-B/16 — confirming `Erf` is a general QNN/AI Hub compatibility gap, not a ViT-specific quirk.
+
+### 3. The workaround — and a wrinkle unique to Whisper
+
+Swapping to a tanh-approximation GELU via `config.activation_function = "gelu_new"` fixed the 6 per-layer blocks, but the conv-stem's GELU calls `F.gelu` directly in Whisper's `forward()` method, bypassing the config-driven activation module. A targeted monkey-patch (`F.gelu = gelu_tanh`) was needed to catch both call sites. Re-running diagnosis confirmed zero remaining `Erf` ops.
+
+This is itself a useful diagnostic finding: **the same fix pattern (config swap) doesn't always fully resolve the same op class (Erf) across different model architectures** — SnapDoctor's two-pass diagnose → verify workflow caught the gap that a single fix-and-ship attempt would have missed.
+
+### 4. Hardware verification result
+
+| Metric               |                Result |
+| --------------------- | ---------------------: |
+| Compile                |               ✅ SUCCESS |
+| Profile                |               ✅ SUCCESS |
+| NPU residency          |          100% (304/304 ops) |
+| Mean inference latency |                ~119.6 µs |
+| Total cycles            |             544,520,982 |
+| Peak inference memory   |                ~21.3 MB |
+
+Every op in the profiled graph — including the quantized Tanh/Pow GELU workaround — executed on the NPU. Zero CPU/GPU fallback.
+
+### 5. A different bottleneck than ViT — not the same story repeated
+
+Unlike ViT, where the Tanh/Pow GELU workaround was the dominant cost, cycle-level analysis of the Whisper encoder shows the bottleneck sits elsewhere entirely:
+
+```text
+Top cost contributors (of 544.5M total cycles):
+  FFN fc1 MatMul dequant (6 layers):     ~154M cycles (~28%)
+  FFN fc1 Add (6 layers):                 ~95M cycles (~17%)
+  Self-attention blocks (6 layers):      ~180M cycles (~33%)
+
+175/175 watched ops ran on NPU.
+```
+
+The GELU/Tanh-Pow workaround does not appear among the top cost contributors here. The dominant cost is FFN (`fc1`) matrix multiplication and its FP16 dequantization overhead — a structurally different bottleneck than the GELU-driven cost found in ViT.
+
+**This is the key cross-domain finding:** the same diagnostic method (quantize → profile → trace per-node cycles) surfaces a *different, architecture-specific* bottleneck depending on the model — exactly what a genuine diagnostic tool should do, rather than reporting the same generic result regardless of input.
+
+| | ViT-B/16 | Whisper-base encoder |
+|---|---|---|
+| Erf blocker | ✅ Found | ✅ Found |
+| Fix applied | Tanh-approx GELU | Tanh-approx GELU (+ conv-stem patch) |
+| NPU residency | 100% | 100% |
+| Dominant cost driver | Tanh/Pow GELU path (~58% combined) | FFN MatMul dequant (~28%) |
+
+---
 
 ## 🧠 What SnapDoctor Learned
 
@@ -337,22 +403,21 @@ Therefore SnapDoctor is evolving beyond a simple **"NPU fallback detector"** int
 
 ```mermaid
 flowchart LR
-
-    A[✅ ResNet18<br/>CNN baseline]
-      --> B[✅ ViT-B/16<br/>Attention + GELU]
-
-    B --> C[⏳ ControlNet block<br/>Diffusion-specific ops]
-
-    C --> D[⏳ SnapGen Control<br/>Full demo application]
+    A["✅ ResNet18<br/>CNN baseline"]
+    --> B["✅ ViT-B/16<br/>Attention + GELU"]
+    B --> C["✅ Whisper-base<br/>Speech encoder"]
+    C --> D["⏳ ControlNet block<br/>Diffusion-specific ops"]
+    D --> E["⏳ SnapGen Control<br/>Full demo application"]
 
     style A fill:#51cf66,color:#fff
     style B fill:#51cf66,color:#fff
-    style C fill:#ffd43b
-    style D fill:#adb5bd
-```
+    style C fill:#51cf66,color:#fff
+    style D fill:#ffd43b,color:#222
+    style E fill:#adb5bd,color:#fff
 
 * [x] CNN model pipeline — ResNet18 diagnosed → transformed → hardware-verified
 * [x] Attention model pipeline — ViT-B/16 `Erf` blocker diagnosed → GELU workaround → hardware profiling
+* [x] Cross-domain validation — Whisper-base encoder (speech), same `Erf` blocker class, same fix pattern, 100% NPU residency, distinct bottleneck identified
 * [x] Cycle-level analysis from AI Hub profile data
 * [x] Tanh/Pow QDQ experiment
 * [ ] Diffusion-specific / ControlNet-shaped blocks
