@@ -178,6 +178,70 @@ flowchart TB
 
 ---
 
+---
+
+## 🖥️ CLI Dashboard
+
+Raw script output works for development, but for a quick look at any model's NPU compatibility or hardware profile, SnapDoctor ships a `rich`-based CLI dashboard.
+
+### Diagnose a model
+
+```bash
+python -m snapdoctor.cli report data/models/your_model.onnx [data/logs/your_log.log]
+```
+
+This renders a formatted summary instead of a plain text dump:
+
+```text
+╭──────────────────────────────────────────────╮
+│ Diagnosing: whisper_base_encoder_tanhgelu.onnx │
+╰──────────────────────────────────────────────╯
+
+Op-level NPU compatibility: 67.4% (219/325 ops)
+
+              Unsupported / Fallback Ops
+ ─────────────────────────────────────────────
+  Op                        Type      Reason
+ ─────────────────────────────────────────────
+  /layers.0/self_attn/...   Reshape   'Reshape' not in known QNN-supported op set
+  ...
+
+HTP (NPU) runnable: False
+  Model appears fully float32 — run quantize_model.py before deployment.
+```
+
+The `log_path` argument is optional — omit it to run static op-support diagnosis without QNN runtime fallback correlation.
+
+> **Note:** the unsupported-ops table is capped at 15 rows for terminal readability; the total count and a "...and N more" line are always shown.
+
+### Analyze a hardware profile
+
+```bash
+python -m snapdoctor.cli analyze reports/your_model_profile_raw.json
+```
+
+Renders NPU residency and a ranked cost-by-node-type breakdown from a real AI Hub `execution_detail` profile:
+
+```text
+╭─────────────────────────────╮
+│ Hardware Profile Analysis     │
+╰─────────────────────────────╯
+NPU residency: 304/304 ops (100%)
+Total cycles: 544,520,982
+
+           Top Cost Contributors
+ ────────────────────────────────────────
+  Node Type              Cycles    % of Total   Node Count
+ ────────────────────────────────────────
+  /layers.4/self       30,411,859     5.6%          30
+  /layers.0/self       30,334,474     5.6%          30
+  ...
+```
+
+Both commands wrap the same diagnostic engine used by `report.py` and `analyze_erf_fallback.py` — no separate logic, just a cleaner presentation layer over the same hardware-verified data.
+
+---
+
 ## 📊 Real Hardware Result — ResNet18
 
 ### Snapdragon X Elite CRD via Qualcomm AI Hub
